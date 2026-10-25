@@ -1,0 +1,93 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap");
+
+:root {
+  --arsenal-red: #db0007;
+  --arsenal-dark: #0f0f0f;
+  --arsenal-gray: #1a1a1a;
+  --arsenal-white: #ffffff;
+  --arsenal-gold: #9C824A;
+  --font-primary: "Chakra Petch", sans-serif;
+  --font-body: "Montserrat", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--arsenal-dark);
+  color: var(--arsenal-white);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-primary);
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+button {
+  font-family: var(--font-primary);
+  letter-spacing: 1px;
+}
+
+p {
+  color: #cccccc;
+}
+
+section {
+  padding: 80px 60px;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 60px 25px;
+  }
+}
+
+/* Navbar Styles */
+.nav-link {
+  color: var(--arsenal-white);
+  text-decoration: none;
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  letter-spacing: 2px;
+  position: relative;
+  transition: color 0.3s ease;
+  padding-bottom: 5px;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--arsenal-gold);
+  /* Using a gold accent for the hover */
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #f0f0f0;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
